@@ -1,0 +1,14 @@
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\bin\Debug\Btap 4_4.exe.config
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\bin\Debug\Btap 4_4.exe
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\bin\Debug\Btap 4_4.pdb
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap 4_4.csprojAssemblyReference.cache
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap_4_4.Properties.Resources.resources
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap 4_4.csproj.GenerateResource.cache
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap 4_4.csproj.CoreCompileInputs.cache
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap 4_4.exe
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap 4_4.pdb
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap_4_4.securityPanel.resources
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\bin\Debug\BCrypt.Net.dll
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\bin\Debug\BCrypt.Net.xml
+C:\Users\taiba\source\repos\Btap 4_4\Btap 4_4\obj\Debug\Btap 4_4.csproj.CopyComplete
