@@ -71,9 +71,7 @@ namespace Btap_4_4
             this.txtCodeSec.ReadOnly = true;
             this.txtCodeSec.Size = new System.Drawing.Size(196, 22);
             this.txtCodeSec.TabIndex = 1;
-            this.txtCodeSec.Text = "pass";
             this.txtCodeSec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCodeSec.UseSystemPasswordChar = true;
             // 
             // CodeSecur
             // 
@@ -124,7 +122,7 @@ namespace Btap_4_4
             this.but2.TabIndex = 0;
             this.but2.Text = "2";
             this.but2.UseVisualStyleBackColor = true;
-            this.but2.Click += new System.EventHandler(this.but2_Click);
+            this.but2.Click += new System.EventHandler(this.but1_Click);
             // 
             // but3
             // 
@@ -135,7 +133,7 @@ namespace Btap_4_4
             this.but3.TabIndex = 0;
             this.but3.Text = "3";
             this.but3.UseVisualStyleBackColor = true;
-            this.but3.Click += new System.EventHandler(this.but3_Click);
+            this.but3.Click += new System.EventHandler(this.but1_Click);
             // 
             // butC
             // 
@@ -147,7 +145,7 @@ namespace Btap_4_4
             this.butC.TabIndex = 0;
             this.butC.Text = "C";
             this.butC.UseVisualStyleBackColor = false;
-            this.butC.Click += new System.EventHandler(this.butC_Click);
+            this.butC.Click += new System.EventHandler(this.but1_Click);
             // 
             // but4
             // 
@@ -158,7 +156,7 @@ namespace Btap_4_4
             this.but4.TabIndex = 0;
             this.but4.Text = "4";
             this.but4.UseVisualStyleBackColor = true;
-            this.but4.Click += new System.EventHandler(this.but4_Click);
+            this.but4.Click += new System.EventHandler(this.but1_Click);
             // 
             // but5
             // 
@@ -169,7 +167,7 @@ namespace Btap_4_4
             this.but5.TabIndex = 0;
             this.but5.Text = "5";
             this.but5.UseVisualStyleBackColor = true;
-            this.but5.Click += new System.EventHandler(this.but5_Click);
+            this.but5.Click += new System.EventHandler(this.but1_Click);
             // 
             // but6
             // 
@@ -180,7 +178,7 @@ namespace Btap_4_4
             this.but6.TabIndex = 0;
             this.but6.Text = "6";
             this.but6.UseVisualStyleBackColor = true;
-            this.but6.Click += new System.EventHandler(this.but6_Click);
+            this.but6.Click += new System.EventHandler(this.but1_Click);
             // 
             // butE
             // 
@@ -192,7 +190,7 @@ namespace Btap_4_4
             this.butE.TabIndex = 0;
             this.butE.Text = "E";
             this.butE.UseVisualStyleBackColor = false;
-            this.butE.Click += new System.EventHandler(this.butE_Click);
+            this.butE.Click += new System.EventHandler(this.but1_Click);
             // 
             // but7
             // 
@@ -203,7 +201,7 @@ namespace Btap_4_4
             this.but7.TabIndex = 0;
             this.but7.Text = "7";
             this.but7.UseVisualStyleBackColor = true;
-            this.but7.Click += new System.EventHandler(this.but7_Click);
+            this.but7.Click += new System.EventHandler(this.but1_Click);
             // 
             // but8
             // 
@@ -214,7 +212,7 @@ namespace Btap_4_4
             this.but8.TabIndex = 0;
             this.but8.Text = "8";
             this.but8.UseVisualStyleBackColor = true;
-            this.but8.Click += new System.EventHandler(this.but8_Click);
+            this.but8.Click += new System.EventHandler(this.but1_Click);
             // 
             // but9
             // 
@@ -225,7 +223,7 @@ namespace Btap_4_4
             this.but9.TabIndex = 0;
             this.but9.Text = "9";
             this.but9.UseVisualStyleBackColor = true;
-            this.but9.Click += new System.EventHandler(this.but9_Click);
+            this.but9.Click += new System.EventHandler(this.but1_Click);
             // 
             // but0
             // 
@@ -236,7 +234,7 @@ namespace Btap_4_4
             this.but0.TabIndex = 0;
             this.but0.Text = "0";
             this.but0.UseVisualStyleBackColor = true;
-            this.but0.Click += new System.EventHandler(this.but0_Click);
+            this.but0.Click += new System.EventHandler(this.but1_Click);
             // 
             // accessLog
             // 
@@ -267,11 +265,13 @@ namespace Btap_4_4
             this.Controls.Add(this.accessLog);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "securityPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Security Panel";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.securityPanel_KeyPress);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);

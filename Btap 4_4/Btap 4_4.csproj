@@ -52,9 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\deleteStringFromIndex.cs" />
-    <Compile Include="DAO\ReadFile.cs" />
-    <Compile Include="DAO\WriteFile.cs" />
+    <Compile Include="deleteStringFromIndex.cs" />
+    <Compile Include="ReadFile.cs" />
+    <Compile Include="WriteFile.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +89,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

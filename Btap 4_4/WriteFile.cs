@@ -36,6 +36,7 @@ namespace Btap_4_4.DAO
                 using (StreamWriter sw = new StreamWriter(CurrentDirectory,true))
                 {
                     sw.WriteLine(s);
+                    sw.Close();
                 }
             }
             catch (Exception e)

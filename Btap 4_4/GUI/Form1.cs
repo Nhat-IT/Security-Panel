@@ -18,92 +18,56 @@ namespace Btap_4_4
         {
             InitializeComponent();
             ViewHistory.DataSource = ReadFile.Instance.readFile();
+            //txtCodeSec.Text = "";
         }
         static String passWord = "2021";
         String passHash = BCrypt.Net.BCrypt.HashPassword(passWord);
 
         String s = "";
+        String record;
         private void but1_Click(object sender, EventArgs e)
         {
-            s += "1";
+            Button b = (Button)sender;
+            xuli(b.Text[0]);
             txtCodeSec.Text = s;
         }
 
-        private void but2_Click(object sender, EventArgs e)
+        private void securityPanel_KeyPress(object sender, KeyPressEventArgs e)
         {
-            s += "2";
+            xuli(e.KeyChar);
             txtCodeSec.Text = s;
+            if ((Convert.ToInt32(e.KeyChar) == 13))
+            {
+                s = "";
+                txtCodeSec.Text = s;
+            }
         }
 
-        private void but3_Click(object sender, EventArgs e)
+        private void xuli(char x)
         {
-            s += "3";
-            txtCodeSec.Text = s;
+            if (!((Convert.ToInt32(x) == 13) || x.Equals('E')) && !(Convert.ToInt32(x) == 8 || x.Equals('C')) && Convert.ToInt32(x) >= 48 && Convert.ToInt32(x) <= 57)
+            {
+                s += x;
+            }
+
+            else if ((Convert.ToInt32(x) == 8 || x.Equals('C')))
+            {
+                if (s.Length > 0) s = s.Remove(s.Length - 1);
+            }
+            else if ((Convert.ToInt32(x) == 13 || x.Equals('E')))
+            {
+                DateTime time = DateTime.Now;
+                String timeString = deleteStringFromIndex.Instance.delete3charLastInDateTime(time.ToString());
+                String passType = txtCodeSec.Text;
+                Boolean check = BCrypt.Net.BCrypt.Verify(passType, passHash);
+                if (check == false)
+                    record = timeString + "\t\tAccess Denied";
+                else if (check == true)
+                    record = timeString + "\t\tGranted";
+                WriteFile.Instance.writeFile(record);
+                ViewHistory.DataSource = ReadFile.Instance.readFile();
+            }
         }
 
-        private void but4_Click(object sender, EventArgs e)
-        {
-            s += "4";
-            txtCodeSec.Text = s;
-        }
-
-        private void but5_Click(object sender, EventArgs e)
-        {
-            s += "5";
-            txtCodeSec.Text = s;
-        }
-
-        private void but6_Click(object sender, EventArgs e)
-        {
-            s += "6";
-            txtCodeSec.Text = s;
-        }
-
-        private void but7_Click(object sender, EventArgs e)
-        {
-            s += "7";
-            txtCodeSec.Text = s;
-        }
-
-        private void but8_Click(object sender, EventArgs e)
-        {
-            s += "8";
-            txtCodeSec.Text = s;
-        }
-
-        private void but9_Click(object sender, EventArgs e)
-        {
-            s += "9";
-            txtCodeSec.Text = s;
-        }
-
-        private void but0_Click(object sender, EventArgs e)
-        {
-            s += "0";
-            txtCodeSec.Text = s;
-        }
-
-        private void butC_Click(object sender, EventArgs e)
-        {
-            if(s.Length > 0) s = s.Remove(s.Length - 1);
-            txtCodeSec.Text = s;
-        }
-        
-        String record;
-        private void butE_Click(object sender, EventArgs e)
-        {
-            DateTime time = DateTime.Now;
-            String timeString = deleteStringFromIndex.Instance.delete3charLastInDateTime(time.ToString());
-            String passType = txtCodeSec.Text;
-            Boolean check = BCrypt.Net.BCrypt.Verify(passType, passHash);
-            if (s.Length == 1 && check == false)
-                record = timeString + "\tRestricted Access";
-            else if (check == false)
-                record = timeString + "\tAccess Denied";
-            else if (check == true)
-                record = timeString + "\tGranted";
-            WriteFile.Instance.writeFile(record);
-            ViewHistory.DataSource = ReadFile.Instance.readFile();
-        }
     }
 }
